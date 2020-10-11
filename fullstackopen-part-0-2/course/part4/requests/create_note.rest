@@ -1,0 +1,8 @@
+POST http://localhost:3000/api/notes
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNlYW4iLCJpZCI6IjVkNTZhN2E3NTNmNGUwMjQ4ZTRkMDhhNiIsImlhdCI6MTU2NTk2ODY4Mn0.kwyR8hKg6Rc8h1haRW0S9W1i1A_fEraKAXBqToX6ylI
+
+{
+    "content": "testing create note with json web token headers",
+    "important": true
+}

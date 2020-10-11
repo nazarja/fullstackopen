@@ -1,0 +1,10 @@
+POST http://localhost:3000/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphY29iIiwiaWQiOiI1ZDU2ZmIwZjE1ZTRjZjVkNTRmNTljMzUiLCJpYXQiOjE1NjU5OTc4MjR9.Xgz0ToqecfnpbaVWszTZlYEOkVozIXt-5lkByfdpKWY
+
+{
+    "title": "Another new Blog",
+    "author": "The BLOG author",
+    "url": "http://localhost:300/api/blogs/6555",
+    "likes": 6
+}

@@ -1,0 +1,30 @@
+{
+  "name": "part3",
+  "version": "0.0.1",
+  "description": "part3 of the Helsinki fullstackopen course",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "watch": "nodemon src/server.js",
+    "build:ui": "rm -rf build && cd ../part2 && npm run build --prod && cp build -r ../part3",
+    "deploy": "git push heroku master",
+    "deploy full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
+    "logs:prod": "heroku logs --tail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nazarja/fullstackopen/course/part3"
+  },
+  "author": "Sean Murphy",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

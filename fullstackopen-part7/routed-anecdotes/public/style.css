@@ -1,0 +1,33 @@
+
+body {
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-link {
+    padding: 5px 10px;
+}
+
+a:hover {
+    color: black;
+}
+
+label {
+    width: 85px;
+    display: inline-block;
+}
+
+button {
+    border: 0px solid;
+    border-radius: 5px;
+    background-color: steelblue;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 10px auto;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #222;
+}

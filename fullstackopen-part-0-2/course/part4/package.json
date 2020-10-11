@@ -1,0 +1,41 @@
+{
+  "name": "part3",
+  "version": "0.0.1",
+  "description": "part3 of the Helsinki fullstackopen course",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node src/index.js",
+    "watch": "NODE_ENV=development nodemon src/index.js",
+    "build:ui": "rm -rf build && cd ../part2 && npm run build --prod && cp build -r ../part4",
+    "deploy": "git push heroku master",
+    "deploy full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint .",
+    "test": "NODE_ENV=test jest --verbose --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nazarja/fullstackopen/course/part4"
+  },
+  "author": "Sean Murphy",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.9",
+    "mongoose-unique-validator": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

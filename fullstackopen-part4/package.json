@@ -1,0 +1,37 @@
+{
+  "name": "fullstackopen-part4",
+  "version": "1.0.0",
+  "description": "Blog: part4 of the Helsinki fullstackopen course",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node src/index.js",
+    "watch": "NODE_ENV=development nodemon src/index.js",
+    "lint": "eslint .",
+    "test": "NODE_ENV=test jest --verbose --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nazarja/fullstackopen-part4"
+  },
+  "author": "Sean Murphy",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.9",
+    "mongoose-unique-validator": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

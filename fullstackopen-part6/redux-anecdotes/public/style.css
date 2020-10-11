@@ -1,0 +1,25 @@
+* {
+    font-family: sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    margin-top: 5px;
+    background-color: cornflowerblue;
+    padding: 5px 10px;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#filter {
+    margin: 20px auto;
+}
+
+#filter label {
+    padding-right: 15px;
+}

@@ -1,0 +1,36 @@
+title New Note Sequence
+
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+server->browser: STATUS 302 FOUND
+
+note over browser:
+form data: Another note
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+server->browser: STATUS 302 REDIRECT
+server->browser: HTML-code
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server->browser: STATUS 200 OK
+server->browser: main.css
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server->browser: STATUS 200 OK
+server->browser: main.js
+
+note over browser:
+browser starts executing js-code
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server->browser: STATUS 200 OK
+server->browser: data.json
+
+note over server:
+server reponds with json response
+end note
+server->browser: [{"content":"Another note","date":"2019-08-02T11:05:32.440Z"}]
+
+note over browser:
+browser executes json reponse and displays new note
+end note
